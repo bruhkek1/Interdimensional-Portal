@@ -942,10 +942,10 @@ function drawScratchCard() {
     displayX = width * 0.15;
   } else if (currentImageIdx === 6) {
     // Dimension 7 (Fracture / London): left-align (wide image, need text on right)
-    displayX = width * 0.075;
+    displayX = width * 0.02;
   } else if (currentImageIdx === 7) {
     // Dimension 8 (Resonance / Horizon Line): left-align (tall image, need text on right)
-    displayX = width * 0.075;
+    displayX = width * 0.02;
   } else if (isWide) {
     // Wide images: center them
     displayX = (width - displayWidth) / 2;
@@ -971,10 +971,10 @@ function drawScratchCard() {
       displayX = width * 0.075;
     } else if (currentImageIdx === 6) {
       // Dimension 7 (Fracture / London): keep left-aligned
-      displayX = width * 0.075;
+      displayX = width * 0.02;
     } else if (currentImageIdx === 7) {
       // Dimension 8 (Resonance / Horizon Line): keep left-aligned
-      displayX = width * 0.075;
+      displayX = width * 0.02;
     } else if (isWide) {
       // Wide images: center them
       displayX = (width - displayWidth) / 2;
@@ -1053,7 +1053,7 @@ function drawDimensionLore(imgX, imgY, imgW, imgH) {
   
   // === TEXT ALWAYS PLACED ON DEAD SPACE (left or right of image) ===
   let textColWidth = 320; // Wider column since image is smaller
-  let textGap = 50; // Slightly larger gap
+  let textGap = 100; // Breathing space between image and text
   
   // Determine which side to place text: check available space
   let imgAspect = imgW / imgH;
