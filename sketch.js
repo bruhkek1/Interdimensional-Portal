@@ -940,6 +940,12 @@ function drawScratchCard() {
   if (currentImageIdx === 4) {
     // Dimension 4 (Nexus): left-align to leave room for text on the right
     displayX = width * 0.15;
+  } else if (currentImageIdx === 6) {
+    // Dimension 7 (Fracture / London): left-align (wide image, need text on right)
+    displayX = width * 0.075;
+  } else if (currentImageIdx === 7) {
+    // Dimension 8 (Resonance / Horizon Line): left-align (tall image, need text on right)
+    displayX = width * 0.075;
   } else if (isWide) {
     // Wide images: center them
     displayX = (width - displayWidth) / 2;
@@ -962,6 +968,12 @@ function drawScratchCard() {
     
     if (currentImageIdx === 4) {
       // Dimension 4 (Nexus): keep left-aligned
+      displayX = width * 0.075;
+    } else if (currentImageIdx === 6) {
+      // Dimension 7 (Fracture / London): keep left-aligned
+      displayX = width * 0.075;
+    } else if (currentImageIdx === 7) {
+      // Dimension 8 (Resonance / Horizon Line): keep left-aligned
       displayX = width * 0.075;
     } else if (isWide) {
       // Wide images: center them
