@@ -1043,32 +1043,28 @@ function drawDimensionLore(imgX, imgY, imgW, imgH) {
   let textColWidth = 320; // Wider column since image is smaller
   let textGap = 50; // Slightly larger gap
   
-  // Determine which side to place text: prefer right for wide images, alternate for tall
+  // Determine which side to place text: check available space
   let imgAspect = imgW / imgH;
-  let isWide = imgAspect > 1.2;
   let textOnRight;
   
-  if (isWide) {
-    // For wide images, always prefer right side for text
-    textOnRight = true;
-  } else {
-    // For tall images, alternate per dimension
-    textOnRight = (currentImageIdx % 2 === 0);
-  }
-  
-  // Calculate available dead space on each side
+  // Calculate available dead space on each side (including gap for text column)
   let spaceOnLeft = imgX - 20; // Space from left edge to image
   let spaceOnRight = width - (imgX + imgW) - 20; // Space from image to right edge
   
-  // Decide side: prefer the side with more space
-  if (spaceOnLeft < textColWidth && spaceOnRight >= textColWidth) {
-    textOnRight = true;
-  } else if (spaceOnRight < textColWidth && spaceOnLeft >= textColWidth) {
+  // Decide side based on available space (need room for column + gap)
+  if (spaceOnLeft >= textColWidth + textGap && spaceOnRight >= textColWidth + textGap) {
+    // Both sides fit — prefer right for wide images, alternate for tall
+    if (imgAspect > 1.2) {
+      textOnRight = true;
+    } else {
+      textOnRight = (currentImageIdx % 2 === 0);
+    }
+  } else if (spaceOnLeft >= textColWidth + textGap) {
     textOnRight = false;
-  }
-  // If both sides fit, use the preference.
-  // If neither side fits well, default to the side with more space.
-  if (spaceOnLeft < textColWidth && spaceOnRight < textColWidth) {
+  } else if (spaceOnRight >= textColWidth + textGap) {
+    textOnRight = true;
+  } else {
+    // Neither side fits well — default to side with more space
     textOnRight = (spaceOnRight >= spaceOnLeft);
   }
   
@@ -1076,10 +1072,11 @@ function drawDimensionLore(imgX, imgY, imgW, imgH) {
   let textX, textMaxX;
   if (textOnRight) {
     textX = imgX + imgW + textGap;
-    textMaxX = width - 20;
+    // Account for text column width so the full column stays on screen
+    textMaxX = width - 20 - textColWidth;
   } else {
     textX = 20;
-    textMaxX = imgX - textGap;
+    textMaxX = imgX - textGap - textColWidth;
   }
   
   // Clamp to screen bounds
