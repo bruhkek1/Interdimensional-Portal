@@ -844,6 +844,36 @@ function startAudio() {
   // Fade in master
   masterGain.gain.setTargetAtTime(0.65, audioCtx.currentTime, 2);
 
+  // Fade in background music and set up track switching
+  bgMusic1.volume(0.5);
+  bgMusic1.loop();
+  bgMusic1.play();
+  bgMusic2.volume(0);
+  bgMusic2.loop();
+  bgMusicPlaying = true;
+  currentBgTrack = 0;
+
+  // Set up ended listeners for track switching
+  bgMusic1.onEnded(() => {
+    if (bgMusicPlaying) {
+      bgMusic1.stop();
+      bgMusic1.volume(0);
+      bgMusic2.volume(0.5);
+      bgMusic2.play();
+      currentBgTrack = 1;
+    }
+  });
+  
+  bgMusic2.onEnded(() => {
+    if (bgMusicPlaying) {
+      bgMusic2.stop();
+      bgMusic2.volume(0);
+      bgMusic1.volume(0.5);
+      bgMusic1.play();
+      currentBgTrack = 0;
+    }
+  });
+
   // Initialize UI
   initUI();
 
