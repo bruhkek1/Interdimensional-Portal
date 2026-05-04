@@ -939,7 +939,13 @@ function drawScratchCard() {
   // Position horizontally based on aspect ratio and dimension
   if (currentImageIdx === 4) {
     // Dimension 4 (Nexus): left-align to leave room for text on the right
-    displayX = width * 0.15;
+    displayX = width * 0.02;
+  } else if (currentImageIdx === 2) {
+    // Dimension 3 (Inferno/Fire): left-align (need text on right)
+    displayX = width * 0.02;
+  } else if (currentImageIdx === 3) {
+    // Dimension 4 (Abyss/Road): left-align (need text on right)
+    displayX = width * 0.02;
   } else if (currentImageIdx === 6) {
     // Dimension 7 (Fracture / London): left-align (wide image, need text on right)
     displayX = width * 0.02;
@@ -968,7 +974,13 @@ function drawScratchCard() {
     
     if (currentImageIdx === 4) {
       // Dimension 4 (Nexus): keep left-aligned
-      displayX = width * 0.075;
+      displayX = width * 0.02;
+    } else if (currentImageIdx === 2) {
+      // Dimension 3 (Inferno/Fire): keep left-aligned
+      displayX = width * 0.02;
+    } else if (currentImageIdx === 3) {
+      // Dimension 4 (Abyss/Road): keep left-aligned
+      displayX = width * 0.02;
     } else if (currentImageIdx === 6) {
       // Dimension 7 (Fracture / London): keep left-aligned
       displayX = width * 0.02;
