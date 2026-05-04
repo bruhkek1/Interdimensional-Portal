@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNAL INTERCEPT // DIMENSIONAL DATASTREAM</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◈</text></svg>">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+            background-color: #000;
+            font-family: 'Courier New', Courier, monospace;
+            cursor: crosshair;
+        }
+
+        /* === SCANLINE OVERLAY === */
+        #scanlines {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.15) 0px,
+                rgba(0, 0, 0, 0.15) 1px,
+                transparent 1px,
+                transparent 3px
+            );
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        /* === VIGNETTE === */
+        #vignette {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.7) 100%);
+            pointer-events: none;
+            z-index: 49;
+        }
+
+        /* === CANVAS === */
+        #canvas-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* === TERMINAL UI === */
+        #terminal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            pointer-events: none;
+            color: #0ff;
+            text-shadow: 0 0 8px rgba(0, 255, 255, 0.6), 0 0 2px #0ff;
+        }
+
+        /* Top bar */
+        #top-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 15px 20px;
+            background: linear-gradient(180deg, rgba(0, 20, 30, 0.9) 0%, transparent 100%);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+        }
+
+        #top-bar .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        #top-bar .title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #0ff;
+            animation: textFlicker 3s infinite;
+        }
+
+        @keyframes textFlicker {
+            0%, 95%, 100% { opacity: 1; }
+            96% { opacity: 0.8; }
+            97% { opacity: 1; }
+            98% { opacity: 0.6; }
+        }
+
+        /* Lore popup */
+        #lore-popup {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background: rgba(0, 10, 20, 0.95);
+            border: 1px solid #0ff;
+            font-size: 13px;
+            max-width: 400px;
+            display: none;
+            pointer-events: auto;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+        }
+
+        #lore-popup .lore-header {
+            color: #0ff;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        #lore-popup .lore-text {
+            color: #0f0;
+            line-height: 1.6;
+        }
+
+        #lore-popup .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            color: #f00;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Start overlay */
+        #start-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            color: #0ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            cursor: pointer;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #start-overlay h2 {
+            font-size: 36px;
+            letter-spacing: 6px;
+            animation: glitch 1s infinite;
+            margin-bottom: 20px;
+        }
+
+        #start-overlay p {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+
+        #start-overlay .blink {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0) }
+            20% { transform: translate(-2px, 2px) }
+            40% { transform: translate(-2px, -2px) }
+            60% { transform: translate(2px, 2px) }
+            80% { transform: translate(2px, -2px) }
+            100% { transform: translate(0) }
+        }
+
+        /* Flicker animation */
+        @keyframes flicker {
+            0%, 97%, 100% { opacity: 1; }
+            98% { opacity: 0.7; }
+            99% { opacity: 1; }
+        }
+
+        .flicker {
+            animation: flicker 4s infinite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Visual overlays -->
+    <div id="scanlines"></div>
+    <div id="vignette"></div>
+
+    <!-- Start overlay -->
+    <div id="start-overlay">
+        <h2>◈ SIGNAL INTERCEPT ◈</h2>
+        <p>DIMENSIONAL DATASTREAM TERMINAL v2.7.1</p>
+        <p>CLICK TO INITIALIZE CONNECTION</p>
+        <p class="blink">[ AUDIO REQUIRED ]</p>
+    </div>
+
+    <!-- Canvas -->
+    <div id="canvas-container"></div>
+
+      <!-- Terminal UI -->
+        <div id="terminal">
+            <!-- Top bar -->
+            <div id="top-bar">
+                <div class="header">
+                    <span class="title flicker">◈ DIMENSIONAL DATASTREAM INTERCEPT</span>
+                    <span id="clock">00:00:00</span>
+                </div>
+            </div>
+
+            <!-- Lore popup -->
+            <div id="lore-popup">
+                <span class="close-btn" onclick="document.getElementById('lore-popup').style.display='none'">[x]</span>
+                <div class="lore-header" id="lore-header">> PACKET DECRYPTED</div>
+                <div class="lore-text" id="lore-text"></div>
+            </div>
+        </div>
+
+    <script src="sketch.js?v=25"></script>
+</body>
+</html>
