@@ -1891,63 +1891,61 @@ const dimensionLore = [
   { // Gateway (Skatepark)
     header: 'DIM-000 // SKATEPARK // GATEWAY SECTOR',
     subtitle: '(The Gateway)',
-    body: 'Signal lock unstable. This dimension\'s last recorded state shows a concrete ramp at night — graffiti-tagged, abandoned. Someone was here. Someone left marks. The glitch isn\'t corrupting this image — it\'s what\'s happening to it in real time. A portal is opening. Is this the end or a beginning?',
+    body: 'Signal lock unstable. This dimension\'s last recorded state shows a concrete ramp at night \u2014 graffiti-tagged, abandoned. Someone was here. Someone left marks. The glitch isn\'t corrupting this image \u2014 it\'s what\'s happening to it in real time. A portal is opening. Is this the end or a beginning?',
     footer: 'STATUS: UNSTABLE // SIGNAL: 73.2kHz'
   },
   { // Void (Skull)
     header: 'DIM-001 // CRANIUM // POST-BIOLOGICAL FRAGMENT',
     subtitle: '(The Dead Dimension)',
-    body: 'Signal integrity critical. A skull — but not bone. This is vapor. Smoke. The dimension\'s atmosphere, crystallized into a shape that almost remembers being a face. The eyes are hollow because there\'s nothing left to see. This is what a world looks like when the last observer stops looking. The white space around it isn\'t empty — it\'s everything that used to be there.',
+    body: 'Signal integrity critical. A skull \u2014 but not bone. This is vapor. Smoke. The dimension\'s atmosphere, crystallized into a shape that almost remembers being a face. The eyes are hollow because there\'s nothing left to see. This is what a world looks like when the last observer stops looking. The white space around it isn\'t empty \u2014 it\'s everything that used to be there.',
     footer: 'STATUS: CONTAMINATED // SIGNAL: 3.2kHz'
   },
   { // Inferno (Fire)
     header: 'DIM-002 // INFERNO // FINAL TRANSMISSION',
     subtitle: '(The Last Ritual)',
-    body: 'Signal degrading. A figure in patterned vest and kilt — cultural markers from a civilization that worshipped fire as language. The sparks erupting from the torch aren\'t random. They\'re a message. Each spark is a character. The figure\'s face is calm because they know what they\'re doing: burning their world\'s history into the dark, hoping something on the other side reads it. The darkness around them isn\'t night — it\'s the void between dimensions.',
+    body: 'Signal degrading. A figure in patterned vest and kilt \u2014 cultural markers from a civilization that worshipped fire as language. The sparks erupting from the torch aren\'t random. They\'re a message. Each spark is a character. The figure\'s face is calm because they know what they\'re doing: burning their world\'s history into the dark, hoping something on the other side reads it. The darkness around them isn\'t night \u2014 it\'s the void between dimensions.',
     footer: 'STATUS: CRITICAL // SIGNAL: 265.13kHz'
   },
   { // Abyss
     header: 'DIM-003 // ECHO // MOTION DEGRADATION',
     subtitle: '(The Fading)',
-    body: 'Signal unstable. A road. A guardrail. Trees stripped bare by wind that no one else can feel. A figure walking away — or toward. The motion blur makes it impossible to tell direction. This is what temporal collapse looks like: not a bang, but a blur. The road is still there. The guardrail is still there. But the figure is becoming something else — something that exists in multiple positions at once, a person stretched across time like a long exposure.',
+    body: 'Signal unstable. A road. A guardrail. Trees stripped bare by wind that no one else can feel. A figure walking away \u2014 or toward. The motion blur makes it impossible to tell direction. This is what temporal collapse looks like: not a bang, but a blur. The road is still there. The guardrail is still there. But the figure is becoming something else \u2014 something that exists in multiple positions at once, a person stretched across time like a long exposure.',
     footer: 'STATUS: SINKING // SIGNAL: 0.001kHz'
   },
   { // Nexus
     header: 'DIM-004 // FRACTURE // THREE AT THE EDGE',
     subtitle: '(The Witness)',
-    body: 'Three figures in a dark room. Plastic. Tape. One lies down. One stands over them. One reaches in from the edge of the frame. This isn't violence — it's a procedure. They're preparing something. The tape creates a grid on skin like a circuit board. The plastic bags are being filled with something — air? Memory? The last breath of a dimension? The harsh light reveals everything and nothing. They know what comes next.',
-    footer: 'STATUS: MERGING // SIGNAL: ∞ kHz'
+    body: 'Three figures in a dark room. Plastic. Tape. One lies down. One stands over them. One reaches in from the edge of the frame. This isn\'t violence \u2014 it\'s a procedure. They\'re preparing something. The tape creates a grid on skin like a circuit board. The plastic bags are being filled with something \u2014 air? Memory? The last breath of a dimension? The harsh light reveals everything and nothing. They know what comes next.',
+    footer: 'STATUS: MERGING // SIGNAL: \u221e kHz'
   },
   { // Echo
     header: 'DIM-005 // RESONANCE // THE DANCE',
     subtitle: '(The Fading)',
-    body: 'Signal recovering. A wedding. A couple spinning — the dress billowing like wings, the blur creating ghosts of their movement. This is the dimension's happiest moment, preserved in the exact frame where joy becomes something else. The motion blur isn't a flaw — it's the dimension trying to hold onto the feeling. If they keep spinning, maybe they never have to stop. Maybe they never have to face the end. For one infinite frame, they're just turning and turning and the world is still whole.
-',
+    body: 'Signal recovering. A wedding. A couple spinning \u2014 the dress billowing like wings, the blur creating ghosts of their movement. This is the dimension\'s happiest moment, preserved in the exact frame where joy becomes something else. The motion blur isn\'t a flaw \u2014 it\'s the dimension trying to hold onto the feeling. If they keep spinning, maybe they never have to stop. Maybe they never have to face the end. For one infinite frame, they\'re just turning and turning and the world is still whole.',
     footer: 'STATUS: REVERBERATING // SIGNAL: 440Hz'
   },
   { // Fracture
     header: 'DIM-006 // SHARD // LONDON // 2024',
     subtitle: '(The Ritual of Breaking)',
-    body: 'Signal strong. This one's recent. A London street. A double-decker bus blurring past. People waiting at bus stop A30. They have no idea. They're just commuting, going home, living in a world that has 47 seconds left. The bus is moving at 30mph. The car is idling. The woman with the ponytail is thinking about dinner. None of them know they're the last citizens of a dimension that will cease to exist before they reach their destination. The blur on the bus isn't motion — it's the dimension dissolving at the edges.',
+    body: 'Signal strong. This one\'s recent. A London street. A double-decker bus blurring past. People waiting at bus stop A30. They have no idea. They\'re just commuting, going home, living in a world that has 47 seconds left. The bus is moving at 30mph. The car is idling. The woman with the ponytail is thinking about dinner. None of them know they\'re the last citizens of a dimension that will cease to exist before they reach their destination. The blur on the bus isn\'t motion \u2014 it\'s the dimension dissolving at the edges.',
     footer: 'STATUS: SUPERPOSED // SIGNAL: 12.5kHz'
   },
   { // Resonance
     header: 'DIM-007 // ABYSS // HORIZON LINE',
     subtitle: '(The Memory)',
-    body: 'Signal fluctuating. Two figures walking toward a sunset that shouldn't exist — the sky is the color of a dying star, oranges bleeding into purple. One holds a staff like a measuring rod. The other walks ahead, already halfway across the threshold. They're not fleeing. They're mapping. The staff measures how far the edge has receded. Today it's closer than yesterday.
-',
+    body: 'Signal fluctuating. Two figures walking toward a sunset that shouldn\'t exist \u2014 the sky is the color of a dying star, oranges bleeding into purple. One holds a staff like a measuring rod. The other walks ahead, already halfway across the threshold. They\'re not fleeing. They\'re mapping. The staff measures how far the edge has receded. Today it\'s closer than yesterday.',
     footer: 'STATUS: RESONATING // SIGNAL: 18.7kHz'
   },
   { // Shard
     header: 'DIM-008 // NEXUS // THE ONE WHO STAYED',
     subtitle: '(The Commuters)',
-    body: 'Signal patchy. A woman in a field of tall grass, wind tearing at her hair, looking back at something the camera can't see. She's not looking at the lens — she's looking at the horizon where the world ended. Her expression isn't fear. It's the quiet of someone who has already said goodbye and is just making sure the memory holds. The grain in this image isn't noise — it's the weight of all the things she's carrying.',
+    body: 'Signal patchy. A woman in a field of tall grass, wind tearing at her hair, looking back at something the camera can\'t see. She\'s not looking at the lens \u2014 she\'s looking at the horizon where the world ended. Her expression isn\'t fear. It\'s the quiet of someone who has already said goodbye and is just making sure the memory holds. The grain in this image isn\'t noise \u2014 it\'s the weight of all the things she\'s carrying.',
     footer: 'STATUS: DECAYING // SIGNAL: 0.0001kHz'
   },
   { // Threshold (Tunnel)
     header: 'DIM-009 // THRESHOLD // THE WAY OUT',
-    subtitle: '(The Finale — The Exit)',
-    body: 'Signal — signal — SIGNAL. This is the last one. The final fragment. A tunnel. Railroad tracks cutting through darkness like a vein. A figure walking away from us, toward the light — the blinding, overexposed, impossible light at the end of the tunnel. They\'re carrying something long and rectangular. A case. A box. The last message from every dimension that came before. The fire performer\'s sparks. The skull\'s vapor. The wedding\'s spinning dress. The commuters\' last commute. All of it, packed into that case, being carried out of the dark. The light at the end isn\'t salvation. It\'s not hell. It\'s just the next place. And the figure is walking toward it because that\'s what you do when every world behind you is gone — you keep walking. You trust the light. You trust that someone, somewhere, is ready to receive what you\'re carrying.',
+    subtitle: '(The Finale \u2014 The Exit)',
+    body: 'Signal \u2014 signal \u2014 SIGNAL. This is the last one. The final fragment. A tunnel. Railroad tracks cutting through darkness like a vein. A figure walking away from us, toward the light \u2014 the blinding, overexposed, impossible light at the end of the tunnel. They\'re carrying something long and rectangular. A case. A box. The last message from every dimension that came before. The fire performer\'s sparks. The skull\'s vapor. The wedding\'s spinning dress. The commuters\' last commute. All of it, packed into that case, being carried out of the dark. The light at the end isn\'t salvation. It\'s not hell. It\'s just the next place. And the figure is walking toward it because that\'s what you do when every world behind you is gone \u2014 you keep walking. You trust the light. You trust that someone, somewhere, is ready to receive what you\'re carrying.',
     footer: 'STATUS: IMPENDING // SIGNAL: 999.9kHz'
   }
 ];
