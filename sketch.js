@@ -139,7 +139,10 @@ function setup() {
   // Handle overlay click to start audio
   let overlay = document.getElementById('start-overlay');
   if (overlay) {
-    overlay.addEventListener('click', startAudio, { once: true });
+    overlay.addEventListener('click', (e) => {
+      e.stopPropagation();
+      startAudio();
+    }, { once: true });
   }
 
   // Track last mouse move time
