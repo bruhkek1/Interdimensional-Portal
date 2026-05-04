@@ -1815,8 +1815,8 @@ function updateProceduralAudio() {
     }
   }
 
-  // === MASTER VOLUME (overall intensity) ===
-  let masterVol = map(vel, 0, 1, 0.24, 0.8);
+  // === MASTER VOLUME (overall intensity, reduced by 40%) ===
+  let masterVol = map(vel, 0, 1, 0.144, 0.48);
   masterGain.gain.setTargetAtTime(masterVol, t, 0.1);
 
   // === PORTAL TRANSITION AUDIO ===
