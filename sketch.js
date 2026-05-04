@@ -1906,39 +1906,39 @@ const dimensionLore = [
     body: 'Signal degrading. A figure in patterned vest and kilt \u2014 cultural markers from a civilization that worshipped fire as language. The sparks erupting from the torch aren\'t random. They\'re a message. Each spark is a character. The figure\'s face is calm because they know what they\'re doing: burning their world\'s history into the dark, hoping something on the other side reads it. The darkness around them isn\'t night \u2014 it\'s the void between dimensions.',
     footer: 'STATUS: CRITICAL // SIGNAL: 265.13kHz'
   },
-  { // Abyss
-    header: 'DIM-003 // ECHO // MOTION DEGRADATION',
-    subtitle: '(The Fading)',
+  { // Abyss (dark road)
+    header: 'DIM-003 // ABYSS // MOTION DEGRADATION',
+    subtitle: '(The Lost Path)',
     body: 'Signal unstable. A road. A guardrail. Trees stripped bare by wind that no one else can feel. A figure walking away \u2014 or toward. The motion blur makes it impossible to tell direction. This is what temporal collapse looks like: not a bang, but a blur. The road is still there. The guardrail is still there. But the figure is becoming something else \u2014 something that exists in multiple positions at once, a person stretched across time like a long exposure.',
     footer: 'STATUS: SINKING // SIGNAL: 0.001kHz'
   },
-  { // Nexus
-    header: 'DIM-004 // FRACTURE // THREE AT THE EDGE',
+  { // Nexus (three figures in room)
+    header: 'DIM-004 // NEXUS // THREE AT THE EDGE',
     subtitle: '(The Witness)',
     body: 'Three figures in a dark room. Plastic. Tape. One lies down. One stands over them. One reaches in from the edge of the frame. This isn\'t violence \u2014 it\'s a procedure. They\'re preparing something. The tape creates a grid on skin like a circuit board. The plastic bags are being filled with something \u2014 air? Memory? The last breath of a dimension? The harsh light reveals everything and nothing. They know what comes next.',
     footer: 'STATUS: MERGING // SIGNAL: \u221e kHz'
   },
-  { // Echo
-    header: 'DIM-005 // RESONANCE // THE DANCE',
-    subtitle: '(The Fading)',
+  { // Echo (wedding dance)
+    header: 'DIM-005 // ECHO // THE DANCE',
+    subtitle: '(The Last Dance)',
     body: 'Signal recovering. A wedding. A couple spinning \u2014 the dress billowing like wings, the blur creating ghosts of their movement. This is the dimension\'s happiest moment, preserved in the exact frame where joy becomes something else. The motion blur isn\'t a flaw \u2014 it\'s the dimension trying to hold onto the feeling. If they keep spinning, maybe they never have to stop. Maybe they never have to face the end. For one infinite frame, they\'re just turning and turning and the world is still whole.',
     footer: 'STATUS: REVERBERATING // SIGNAL: 440Hz'
   },
-  { // Fracture
-    header: 'DIM-006 // SHARD // LONDON // 2024',
-    subtitle: '(The Ritual of Breaking)',
+  { // Fracture (London street)
+    header: 'DIM-006 // FRACTURE // LONDON // 2024',
+    subtitle: '(The Last Commute)',
     body: 'Signal strong. This one\'s recent. A London street. A double-decker bus blurring past. People waiting at bus stop A30. They have no idea. They\'re just commuting, going home, living in a world that has 47 seconds left. The bus is moving at 30mph. The car is idling. The woman with the ponytail is thinking about dinner. None of them know they\'re the last citizens of a dimension that will cease to exist before they reach their destination. The blur on the bus isn\'t motion \u2014 it\'s the dimension dissolving at the edges.',
     footer: 'STATUS: SUPERPOSED // SIGNAL: 12.5kHz'
   },
-  { // Resonance
-    header: 'DIM-007 // ABYSS // HORIZON LINE',
-    subtitle: '(The Memory)',
+  { // Resonance (sunset walkers)
+    header: 'DIM-007 // RESONANCE // HORIZON LINE',
+    subtitle: '(The Mapping)',
     body: 'Signal fluctuating. Two figures walking toward a sunset that shouldn\'t exist \u2014 the sky is the color of a dying star, oranges bleeding into purple. One holds a staff like a measuring rod. The other walks ahead, already halfway across the threshold. They\'re not fleeing. They\'re mapping. The staff measures how far the edge has receded. Today it\'s closer than yesterday.',
     footer: 'STATUS: RESONATING // SIGNAL: 18.7kHz'
   },
-  { // Shard
-    header: 'DIM-008 // NEXUS // THE ONE WHO STAYED',
-    subtitle: '(The Commuters)',
+  { // Shard (woman in field)
+    header: 'DIM-008 // SHARD // THE ONE WHO STAYED',
+    subtitle: '(The One Who Stayed)',
     body: 'Signal patchy. A woman in a field of tall grass, wind tearing at her hair, looking back at something the camera can\'t see. She\'s not looking at the lens \u2014 she\'s looking at the horizon where the world ended. Her expression isn\'t fear. It\'s the quiet of someone who has already said goodbye and is just making sure the memory holds. The grain in this image isn\'t noise \u2014 it\'s the weight of all the things she\'s carrying.',
     footer: 'STATUS: DECAYING // SIGNAL: 0.0001kHz'
   },
